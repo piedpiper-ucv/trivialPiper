@@ -12,13 +12,9 @@ RFCs supported:
 * 2348 - TFTP Blocksize Option
 * 7440 - TFTP Windowsize Option
 
-Additional features:
-* Block ID rollover for sending large files
 
 Limitations:
 * Only octet transfer mode is supported
-* Timeouts will work incorrectly in case of a malicious client sending invalid
-  packets (after receiving an invalid packet, the timeout timer will be reset)
 
 ## Requirements
 * Python 3.6+
@@ -38,11 +34,11 @@ python3 trivialPiper.py
 ```
 Server:
 ```
-server.py [-p <port>] <server-root>
+server.py [-p <port>] -H <server-ip> -u <server-root>
 ```
 Example:
 ```
-python server.py -H 192.168.2.20 -p 69 -u /home/user/server
+python3 server.py -H 192.168.2.20 -p 69 -u /home/user/server
 ```
 
 You can also use the original CLI mode for the client
