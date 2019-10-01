@@ -15,6 +15,7 @@ RFCs supported:
 
 Limitations:
 * Only octet transfer mode is supported
+* Some filenames may fail with the client if they are composed of too many special characters
 
 ## Requirements
 * Python 3.6+
