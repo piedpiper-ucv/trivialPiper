@@ -33,14 +33,16 @@ pip3 install pyqt5
 ## Usage
 
 Client:
+```
 python3 trivialPiper.py
-
+```
 Server:
 ```
 server.py [-p <port>] <server-root>
 ```
 Example:
-```python server.py -H 192.168.2.20 -p 69 -u /home/user/server
+```
+python server.py -H 192.168.2.20 -p 69 -u /home/user/server
 ```
 
 You can also use the original CLI mode for the client
