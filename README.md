@@ -21,7 +21,8 @@ Limitations:
 * PyQT5
 
 Installing Pyqt5 on Debian/Ubuntu based systems:
-```sudo apt install python3-pip
+```
+sudo apt install python3-pip
 pip3 install pyqt5
 ```
 
