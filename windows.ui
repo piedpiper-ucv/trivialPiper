@@ -90,6 +90,9 @@
        <height>331</height>
       </rect>
      </property>
+     <attribute name="headerMinimumSectionSize">
+      <number>46</number>
+     </attribute>
     </widget>
     <widget class="QPushButton" name="finalizarU">
      <property name="geometry">
@@ -114,7 +117,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Estado:</string>
+      <string>Status:</string>
      </property>
     </widget>
    </widget>
@@ -186,7 +189,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Estado:</string>
+      <string>Status:</string>
      </property>
     </widget>
    </widget>
@@ -293,7 +296,7 @@
      <x>0</x>
      <y>0</y>
      <width>745</width>
-     <height>21</height>
+     <height>28</height>
     </rect>
    </property>
   </widget>

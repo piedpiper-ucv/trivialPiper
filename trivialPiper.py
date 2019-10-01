@@ -18,6 +18,9 @@ class proyecto(QMainWindow):
 		self.radioU.setChecked(True)
 		self.widgetDownload.setEnabled(False)
 		self.setWindowIcon(QIcon('img/pplogo.png'))
+		self.setWindowTitle('TrivialPiper - Client')
+		
+		#Definiendo el tema o paleta de la ventana para el cliente
 
 		qApp.setStyle("kvantum-dark")
 		#qApp.setStyle("Fusion")
@@ -86,12 +89,14 @@ class proyecto(QMainWindow):
 		msg.setText("TrivialPiper")
 		msg.setInformativeText("0.1.5")
 		msg.setWindowTitle("TrivialPiper")
-		msg.setDetailedText("TrivialPiper is a practical tftp gui client created by PiedPiper")
+		msg.setDetailedText("TrivialPiper is a practical tftp gui client created by PiedPiper\nhttps://github.com/piedpiper-ucv/trivialPiper")
 		msg.setStandardButtons(QMessageBox.Ok)
 		msg.setBaseSize(QSize(400, 120))
 		#msg.buttonClicked.connect(self.msgButtonClick)
 
-		
+		returnValue = msg.exec()
+		if returnValue == QMessageBox.Ok:
+			print('OK clicked')
 
 	#def msgButtonClick(i):
 		#print("Button clicked is:",i.text())
@@ -126,9 +131,9 @@ class proyecto(QMainWindow):
 		self.command = "python3 client.py -p "+ self.path+" -b "+ self.bsize+" -w "+ self.wsize+" "+ self.ip+" "+ self.port
 		output = subprocess.run([self.command],shell=True)
 		if output.returncode == 0:
-			self.estadoUp.setText("Estado: Correcto")
+			self.estadoUp.setText("Status: OK")
 		else:
-			self.estadoUp.setText("Estado: Error")
+			self.estadoUp.setText("Status: Error")
 
 	
 	def finalizar_Dw(self):
@@ -138,12 +143,12 @@ class proyecto(QMainWindow):
 		self.wsize = self.inputWindow.text()
 		self.fname = PurePosixPath(self.inputDownloadFile.text()).name
 		#Llamar a funcion en client.py o tftp
-		self.command = "client.py -g "+self.fname+" -b "+ self.bsize+" -w "+ self.wsize+" "+ self.ip+" "+ self.port
+		self.command = "python3 client.py -g "+self.fname+" -b "+ self.bsize+" -w "+ self.wsize+" "+ self.ip+" "+ self.port
 		output = subprocess.run([self.command],shell=True)
 		if output.returncode == 0:
-			self.estadoDw.setText("Estado: Correcto")
+			self.estadoDw.setText("Status: OK")
 		else:
-			self.estadoDw.setText("Estado: Error")
+			self.estadoDw.setText("Status: Error")
 		
 	def dummy(self):
 		index = self.arbolDir.currentIndex()
