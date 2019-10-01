@@ -1,9 +1,9 @@
-![trivialPiper](https://raw.githubusercontent.com/piedpiper-ucv/trivialPiper/master/img/pplogo64.png)
+![Screenshot](img/pplogo64.png?raw=true)
 # TrivialPiper
 TFTP (Trivial File Transfer Protocol) GUI client implemented with Pyqt5 
 Based on the client and server implementation of pyTFTP (https://github.com/m4tx/pyTFTP)
 
-![trivialPiper](https://raw.githubusercontent.com/piedpiper-ucv/trivialPiper/master/img/trivialpiper-client.png)
+![Screenshots](img/trivialpiper-client.png?raw=true)
 
 ## Features
 RFCs supported:
